@@ -37,11 +37,7 @@ namespace Work
                 secondFileName = value;
             }
         }
-        public bool EventHandled
-        {
-            get
-            { return}
-        }
+        
 
         private Singleton()
         { }
