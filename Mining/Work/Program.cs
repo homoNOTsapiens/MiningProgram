@@ -15,8 +15,8 @@ namespace Work
             Process myProcess = new Process();
             myProcess.StartInfo.UseShellExecute = false;
             
-            myProcess.StartInfo.FileName = "C:\\Users\\ACER\\Desktop\\" + singleton.SecondFileName + ".bat";
-            myProcess.StartInfo.CreateNoWindow = false;
+            myProcess.StartInfo.FileName =singleton.SecondFileName + ".bat";
+            myProcess.StartInfo.CreateNoWindow = true;
             myProcess.Start();
             SystemEvents.SessionSwitch += SESS;
             Console.ReadKey();
@@ -30,7 +30,7 @@ namespace Work
                 Process myProcess = new Process();
                 myProcess.StartInfo.UseShellExecute = false;
                 
-                myProcess.StartInfo.FileName = "C:\\Users\\ACER\\Desktop\\" + singleton.SecondFileName + ".bat";
+                myProcess.StartInfo.FileName =singleton.SecondFileName + ".bat";
                 myProcess.StartInfo.CreateNoWindow = true;
                 myProcess.Start();
             }
@@ -39,7 +39,7 @@ namespace Work
                 Process myProcess = new Process();
                 myProcess.StartInfo.UseShellExecute = false;
                 
-                myProcess.StartInfo.FileName = "C:\\Users\\ACER\\Desktop\\" + singleton.FirstFileName + ".bat";
+                myProcess.StartInfo.FileName = singleton.FirstFileName + ".bat";
                 myProcess.StartInfo.CreateNoWindow = true;
                 myProcess.Start();
             }
