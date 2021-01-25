@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.ComponentModel;
+using System.IO;
 namespace Work
 {
     class Program
@@ -13,7 +14,7 @@ namespace Work
             singleton.SecondFileName = args[1];
             Process myProcess = new Process();
             myProcess.StartInfo.UseShellExecute = false;
-            // You can start any process, HelloWorld is a do-nothing example.
+            
             myProcess.StartInfo.FileName = "C:\\Users\\ACER\\Desktop\\" + singleton.SecondFileName + ".bat";
             myProcess.StartInfo.CreateNoWindow = false;
             myProcess.Start();
@@ -23,23 +24,23 @@ namespace Work
         static void SESS(object sender, SessionSwitchEventArgs e)
         {
             Singleton singleton = Singleton.getInstance();
-            //Console.WriteLine("Evenst SessionSwitch = "+ e.Reason);
+            
             if (e.Reason == SessionSwitchReason.SessionLock)
             {
                 Process myProcess = new Process();
                 myProcess.StartInfo.UseShellExecute = false;
-                // You can start any process, HelloWorld is a do-nothing example.
+                
                 myProcess.StartInfo.FileName = "C:\\Users\\ACER\\Desktop\\" + singleton.SecondFileName + ".bat";
-                myProcess.StartInfo.CreateNoWindow = false;
+                myProcess.StartInfo.CreateNoWindow = true;
                 myProcess.Start();
             }
             else if (e.Reason == SessionSwitchReason.SessionUnlock)
             {
                 Process myProcess = new Process();
                 myProcess.StartInfo.UseShellExecute = false;
-                // You can start any process, HelloWorld is a do-nothing example.
+                
                 myProcess.StartInfo.FileName = "C:\\Users\\ACER\\Desktop\\" + singleton.FirstFileName + ".bat";
-                myProcess.StartInfo.CreateNoWindow = false;
+                myProcess.StartInfo.CreateNoWindow = true;
                 myProcess.Start();
             }
            

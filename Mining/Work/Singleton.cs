@@ -11,7 +11,6 @@ namespace Work
         private static Singleton instance;
         private string firstFileName;
         private string secondFileName;
-        private bool EventHandled;
         public string FirstFileName
         { get
             {   if (String.IsNullOrEmpty(firstFileName))
@@ -25,6 +24,7 @@ namespace Work
         }
         public string SecondFileName
         {
+            
             get
             {
                 if (String.IsNullOrEmpty(firstFileName))
