@@ -1,1 +1,1 @@
-# MiningProgram
+# Mining script
